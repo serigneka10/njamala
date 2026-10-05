@@ -1,22 +1,10 @@
-import { Funnel, Search, Table } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
-import Image from "next/image";
-export default function Home() {
+import { Funnel, Search, Table } from "lucide-react";
+import React from "react";
+
+export default function page() {
   return (
-    <main className="mt-10">
-      <section className="bg-black px-6 py-20">
-        <div className="mx-auto max-w-7xl text-center">
-          <h1 className="text-4xl font-extrabold text-amber-400 md:text-6xl">
-            Votre boutique en ligne au Sénégal
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg font-bold text-white">
-            Électronique, maison, mode, beauté et bien plus. Livraison rapide à
-            Dakar et partout au Sénégal. Paiement Wave & Orange Money.
-          </p>
-        </div>
-      </section>
-
+    <div className="p-7 mt-14">
       {/* Nos produits */}
       <section className="mt-10 px-6 pb-16">
         <div className="mx-auto max-w-7xl">
@@ -32,12 +20,13 @@ export default function Home() {
               <span>Recherche...</span>
             </button>
 
-            <div className="mt-7 flex flex-col md:flex justify-between space-y-3.5">
+            <div className="mt-7 flex justify-between">
               {/* Gauche */}
               <div className="flex items-center gap-3">
                 {/* Filtre */}
                 <button className="flex justify-center gap-3.5 rounded-lg border border-gray-300 bg-white px-6 py-2 text-sm font-medium hover:bg-gray-50">
                   <Funnel />
+
                   <span className="mt-1">Filtre</span>
                 </button>
 
@@ -50,7 +39,7 @@ export default function Home() {
               {/* Droite */}
               <div className="flex items-center gap-3">
                 {/* Tri */}
-                <select className="rounded-lg border border-gray-300 bg-white px-6 py-2 text-sm outline-none hover:border-amber-400 cursor-pointer">
+                <select className="rounded-lg border border-gray-300 bg-white px-6 py-2 text-sm outline-none hover:border-amber-400">
                   <option>Produit vedette</option>
                   <option>Prix croissant</option>
                   <option>Prix décroissant</option>
@@ -62,12 +51,12 @@ export default function Home() {
                   className="rounded-lg border border-gray-300 bg-black p-2"
                   aria-label="Vue grille"
                 >
-                  <Table className="text-white cursor-pointer" />
+                  <Table className="text-white" />
                 </button>
 
                 {/* Vue liste */}
                 <button
-                  className="rounded-lg border border-gray-300 p-2 cursor-pointer"
+                  className="rounded-lg border border-gray-300 p-2"
                   aria-label="Vue liste"
                 >
                   ☰
@@ -144,86 +133,37 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <div className="flex flex-col items-center justify-center gap-2 sm:gap-4 mt-8">
-       
-
-        <div className="flex gap-7">
- <button className="px-6 py-2 rounded-md bg-amber-700 text-white hover:bg-amber-800 transition">
+      <div className="flex items-center justify-center gap-2 sm:gap-4  p-10">
+        <button className="px-4 py-2 rounded-md bg-amber-700 text-white hover:bg-amber-800 transition">
           Précédent
         </button>
-        <div className="flex gap-4">  <button className="flex h-10 w-12 font-extrabold items-center justify-center rounded-md bg-black text-white hover:bg-gray-800 transition">
+        <button className="flex h-10 w-10 items-center justify-center rounded-md bg-black text-white hover:bg-gray-800 transition">
           {" "}
           1
         </button>
 
-        <button className="hidden  flex h-10 w-10 items-center justify-center rounded-md bg-gray-200 text-black hover:bg-gray-300 transition">
+        <button className="flex h-10 w-10 items-center justify-center rounded-md bg-gray-200 text-black hover:bg-gray-300 transition">
           {" "}
           2
         </button>
 
-        <button className="hidden flex h-10 w-10 items-center justify-center rounded-md bg-gray-200 text-black hover:bg-gray-300 transition">
+        <button className="flex h-10 w-10 items-center justify-center rounded-md bg-gray-200 text-black hover:bg-gray-300 transition">
           {" "}
           3
         </button>
 
-        <button className="hidden  flex h-10 w-10 items-center justify-center rounded-md bg-gray-200 text-black hover:bg-gray-300 transition">
+        <button className="flex h-10 w-10 items-center justify-center rounded-md bg-gray-200 text-black hover:bg-gray-300 transition">
           4
-        </button></div>
-       
+        </button>
 
-        <button className="px-6 py-2 rounded-md bg-amber-700 text-white hover:bg-amber-800 transition">
+        <button className="px-4 py-2 rounded-md bg-amber-700 text-white hover:bg-amber-800 transition">
           Suivant
         </button>
-        </div>
+        <div></div>
 
-
-        <div> <p className="font-extrabold text-gray-900">Afficher de 1 a 8 sur 2</p></div>
        
       </div>
-
-      <section className=" w-full bg-black mt-14">
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-5 px-6 py-12 md:flex-row">
-          <div>
-            <Image
-              className="w-40 rounded-md"
-              src="https://cdn.njamala.com/file-1776855044612-29bbaac3-f7f7-4507-9824-57d569ba2bca.webp"
-              alt="Produit"
-              width={160}
-              height={160}
-            />
-            <p className="font-extrabold text-gray-800 flex justify-center">
-              STICKERS
-            </p>
-          </div>
-
-          <div>
-            <Image
-              className="w-40 rounded-md"
-              src="https://cdn.njamala.com/file-1776855044612-29bbaac3-f7f7-4507-9824-57d569ba2bca.webp"
-              alt="Produit"
-              width={160}
-              height={160}
-            />
-            <p className="font-extrabold text-gray-800 flex justify-center">
-              STICKERS
-            </p>
-          </div>
-
-          <div>
-            <Image
-              className="w-40 rounded-md"
-              src="https://cdn.njamala.com/file-1776855044612-29bbaac3-f7f7-4507-9824-57d569ba2bca.webp"
-              alt="Produit"
-              width={160}
-              height={160}
-            />
-            <p className="font-extrabold text-gray-800 flex justify-center">
-              STICKERS
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+       <p className="font-extrabold text-gray-900 flex justify-center">Afficher de 1 a 8 sur 2</p>
+    </div>
   );
 }
